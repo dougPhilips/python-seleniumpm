@@ -165,7 +165,7 @@ Package Dependencies:
 
 *seleniumpm* installs the following upstream packages as of the latest release:
 
-- `selenium~=2.53.6 <https://pypi.python.org/pypi/selenium/2.53.6>`_
+- `selenium <https://pypi.python.org/pypi/selenium/>`_
 
 Copyright
 ---------
