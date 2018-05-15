@@ -1,6 +1,8 @@
 from tests.uitestwrapper import UiTestWrapper
 from seleniumpm.examples.google_page import GooglePage
 from seleniumpm.examples.wikipedia import Wikipedia
+from seleniumpm.webelements.button import Button
+from seleniumpm.locator import Locator
 
 import random
 
@@ -90,6 +92,8 @@ class TestGoogle(UiTestWrapper):
         self.google.search_field.clear().type(search_term)
         self.google.search_field.submit()
         self.google.wait_for_title(search_term)
+        Button(self.driver, Locator.by_id('pnnext')).wait_for_present()
+
         links = self.google.get_result_links()
         assert len(links) > 5
         print "found {} links".format(len(links))
@@ -133,6 +137,8 @@ class TestGoogle(UiTestWrapper):
             self.google.search_field.clear().type(search_term)
             self.google.search_field.submit()
             self.google.wait_for_title(search_term)
+            Button(self.driver, Locator.by_id('pnnext')).wait_for_present()
+
             # Grab the first 5 urls
             links = self.google.get_result_links()
             assert len(links) >= 5
