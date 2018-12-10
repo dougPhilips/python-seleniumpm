@@ -36,7 +36,7 @@ if sys.argv[-1] == 'publish':
 
 packages = ['seleniumpm', 'seleniumpm.webelements', 'seleniumpm.examples', 'seleniumpm.examples.widgets']
 
-requires = ['selenium~=2.53.6']
+requires = ['selenium']
 test_requirements = ['pytest>=2.8.0', 'pytest-httpbin==0.0.7', 'pytest-cov']
 
 with open('seleniumpm/__init__.py', 'r') as fd:

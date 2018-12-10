@@ -5,9 +5,12 @@ class UiTestWrapper(object):
 
     @classmethod
     def setup_class(self):
-        server = 'http://localhost:4444/wd/hub'
-        capabilities = webdriver.DesiredCapabilities.PHANTOMJS
-        self.driver = webdriver.Remote(command_executor=server, desired_capabilities=capabilities)
+        # server = 'http://localhost:4444/wd/hub'
+        # capabilities = webdriver.DesiredCapabilities.PHANTOMJS
+        # capabilities = webdriver.DesiredCapabilities.FIREFOX
+        # self.driver = webdriver.Remote(command_executor=server, desired_capabilities=capabilities)
+        # self.driver = webdriver.Firefox(capabilities=webdriver.DesiredCapabilities.FIREFOX)
+        self.driver = webdriver.PhantomJS()
 
     @classmethod
     def teardown_class(self):
